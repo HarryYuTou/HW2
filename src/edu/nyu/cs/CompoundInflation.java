@@ -24,8 +24,23 @@ import java.util.Scanner;
  public class CompoundInflation {
     
     public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        // prompt the user
+        System.out.println("Please enter your monthly savings rate:");
+        String saving1 = scn.nextLine();
+        //converting data types
+        float saving = Float.valueOf(saving1).floatValue();
+        //do calculatioin based on user input and data given
+        Double value = saving*Math.pow((1-(0.10/12)),6);
+        //convert it to integer
+        int valuecalculated = (int) Math.round(value);
+        //print out the result and close the scanner
+        System.out.println("If you save $"+ (int)saving +" per month with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $"+ valuecalculated +" today.");
+        scn.close();
+
         
-        // complete this function to solve the problem
+        
+        
 
     }
 }

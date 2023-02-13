@@ -38,7 +38,21 @@ public class PopulationProjector {
      * @throws Exception Allows us to not worry about Exceptions in this function. Java requires the main functino include this, even if not used.
      */
     public static void main(String[] args) throws Exception {
-        // complete this function to solve the problem
+        //calculate the population growth based on the data
+        double seconds = 365*24.0*60*60;
+        int yearly_growth = (int) Math.floor(seconds/7.0 - seconds/13.0 + seconds/45.0);
+        
+        
+
+        //following the output format print out the result
+        System.out.println("Here are the projected population numbers for the next five years:");
+        for (int i=2023;i<=2027;i++){
+        System.out.println("- Year " + i + ": "+ (332403650 + yearly_growth*(i-2022)));
+        }
+
+        
+
+        
     }
 
 
